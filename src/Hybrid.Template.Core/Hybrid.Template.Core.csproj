@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../../build/public.props" />
+  <Import Project="../../build/version.props" />
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.0</TargetFrameworks>
+    <RootNamespace>Hybrid.Template.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Authentication.GitHub.Core" Version="1.0.0" />
+    <PackageReference Include="Hybrid.AutoMapper" Version="3.0.0-beta05" />
+    <PackageReference Include="Hybrid.Permissions" Version="3.0.0-beta05" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="[2.2.0, 3.0)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.0'">
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Identity/IdentityService.*.cs">
+      <DependentUpon>IdentityService.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Infos/InfosService.*.cs">
+      <DependentUpon>InfosService.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Infos/InfosService.*.generated.cs">
+      <DependentUpon>InfosService.generated.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Infos/InfosServiceBase.*.generated.cs">
+      <DependentUpon>InfosServiceBase.generated.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

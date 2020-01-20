@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7900F420-598E-44C6-82FD-6D93EE973B6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8031F17A-0101-4C6D-8449-9B673B559BFB}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		build\cmd_install.bat = build\cmd_install.bat
+		Dockerfile = Dockerfile
+		build\public.props = build\public.props
+		build\version.props = build\version.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Template.Core", "src\Hybrid.Template.Core\Hybrid.Template.Core.csproj", "{1A210163-4082-453B-B2B3-2047AF3151E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Template.EntityConfiguration", "src\Hybrid.Template.EntityConfiguration\Hybrid.Template.EntityConfiguration.csproj", "{82ECCB1E-6FFA-4E15-A6E7-D8767BB85612}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hybrid.Template.Web", "src\Hybrid.Template.Web\Hybrid.Template.Web.csproj", "{9E94C834-6DC7-4345-AAAD-78CE5F6E7D3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sln", "sln", "{812684E2-86BD-4C04-8F7D-9B67FA761D2E}"
+	ProjectSection(SolutionItems) = preProject
+		build\sln\.template.config\template.json = build\sln\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cmd", "cmd", "{8B486076-9993-44E6-AE5B-368AC2AC96A8}"
+	ProjectSection(SolutionItems) = preProject
+		build\cmd\hybrid.cmd = build\cmd\hybrid.cmd
+		build\cmd\.template.config\template.json = build\cmd\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{1F23CB14-3E2D-4002-B9DF-6B0F29EAE084}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A210163-4082-453B-B2B3-2047AF3151E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A210163-4082-453B-B2B3-2047AF3151E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A210163-4082-453B-B2B3-2047AF3151E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A210163-4082-453B-B2B3-2047AF3151E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82ECCB1E-6FFA-4E15-A6E7-D8767BB85612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ECCB1E-6FFA-4E15-A6E7-D8767BB85612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ECCB1E-6FFA-4E15-A6E7-D8767BB85612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ECCB1E-6FFA-4E15-A6E7-D8767BB85612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E94C834-6DC7-4345-AAAD-78CE5F6E7D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E94C834-6DC7-4345-AAAD-78CE5F6E7D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E94C834-6DC7-4345-AAAD-78CE5F6E7D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E94C834-6DC7-4345-AAAD-78CE5F6E7D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A210163-4082-453B-B2B3-2047AF3151E2} = {7900F420-598E-44C6-82FD-6D93EE973B6D}
+		{82ECCB1E-6FFA-4E15-A6E7-D8767BB85612} = {7900F420-598E-44C6-82FD-6D93EE973B6D}
+		{9E94C834-6DC7-4345-AAAD-78CE5F6E7D3D} = {7900F420-598E-44C6-82FD-6D93EE973B6D}
+		{812684E2-86BD-4C04-8F7D-9B67FA761D2E} = {8031F17A-0101-4C6D-8449-9B673B559BFB}
+		{8B486076-9993-44E6-AE5B-368AC2AC96A8} = {8031F17A-0101-4C6D-8449-9B673B559BFB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6143427C-5702-456B-A1F2-3D3C65D97C8B}
+	EndGlobalSection
+EndGlobal
