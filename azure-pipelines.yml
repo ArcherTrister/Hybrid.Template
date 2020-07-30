@@ -34,15 +34,15 @@ steps:
 #    projects: '$(buildProjectPath)'
 #    arguments: '--output $(Build.ArtifactStagingDirectory)'
 
-- task: DotNetCoreCLI@2
-  displayName: 'Pack the package'
-  inputs:
-    command: 'pack'
-    configuration: $(buildConfiguration)
-    packagesToPack: '$(buildProjectPath)'
-    nobuild: true
-    versioningScheme: 'off'
-    arguments: '--output $(Build.ArtifactStagingDirectory)'
+# - task: DotNetCoreCLI@2
+#   displayName: 'Pack the package'
+#   inputs:
+#     command: 'pack'
+#     configuration: $(buildConfiguration)
+#     packagesToPack: '$(buildProjectPath)'
+#     nobuild: true
+#     versioningScheme: 'off'
+#     arguments: '--output $(Build.ArtifactStagingDirectory)'
 
 # - task: PublishBuildArtifacts@1
 #   displayName: 'Publish the package'
@@ -50,6 +50,16 @@ steps:
 #     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
 #     ArtifactName: 'drop'
 #     publishLocation: 'Container'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'pack'
+    packagesToPack: 'Hybrid.Template.csproj'
+    nobuild: true
+    includesymbols: true
+    includesource: true
+    versioningScheme: 'off'
+    arguments: '--output $(Build.ArtifactStagingDirectory)'
 
 - task: NuGetCommand@2
   displayName: 'NuGet push'
