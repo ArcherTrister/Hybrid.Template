@@ -17,7 +17,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  buildProjectPath: '**/src/**/*.csproj' # '**/*.csproj' 全匹配
+  buildProjectPath: 'Hybrid.Template.csproj' # '**/*.csproj' 全匹配
 
 steps:
 - task: UseDotNet@2
