@@ -38,7 +38,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\build\icon.png" Pack="true" Visible="false" PackagePath="\" />
+    <None Include=".\build\icon.png" Pack="true" Visible="false" PackagePath="\" />
   </ItemGroup>
   
 </Project>
