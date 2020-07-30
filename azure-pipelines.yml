@@ -51,15 +51,24 @@ steps:
 #     ArtifactName: 'drop'
 #     publishLocation: 'Container'
 
+# - task: DotNetCoreCLI@2
+#   inputs:
+#     command: 'pack'
+#     packagesToPack: 'Hybrid.Template.csproj'
+#     nobuild: true
+#     includesymbols: true
+#     includesource: true
+#     versioningScheme: 'off'
+#     arguments: '--output $(Build.ArtifactStagingDirectory)'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
-    packagesToPack: 'Hybrid.Template.csproj'
+    packagesToPack: '**/*.csproj'
     nobuild: true
     includesymbols: true
     includesource: true
     versioningScheme: 'off'
-    arguments: '--output $(Build.ArtifactStagingDirectory)'
 
 - task: NuGetCommand@2
   displayName: 'NuGet push'
