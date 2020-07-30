@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hybrid.Authorization.Datas" Version="3.1.4-preview" />
+    <PackageReference Include="Hybrid.Authorization.Functions" Version="3.1.4-preview" />
+    <PackageReference Include="Hybrid.AutoMapper" Version="3.1.4-preview" />
+    <PackageReference Include="Hybrid.Zero" Version="3.1.4-preview" />
+  </ItemGroup>
+
+</Project>

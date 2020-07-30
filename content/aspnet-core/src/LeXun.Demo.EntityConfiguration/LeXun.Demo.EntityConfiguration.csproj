@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>netcoreapp3.1</TargetFramework>
+	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hybrid.EntityFrameworkCore" Version="3.1.4-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeXun.Demo.Core\LeXun.Demo.Core.csproj" />
+  </ItemGroup>
+
+</Project>

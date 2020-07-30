@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "ArcherTrister",
+  "classifications": [ "Hybrid/Web/WebAPI" ],
+  "name": "Hybrid Template",
+  "identity": "Hybrid.Demo.CSharp",
+  "groupIdentity": "Hybrid.Sample",
+  "shortName": "hybrid",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "LeXun.Demo",
+  "preferNameDirectory": true,
+  "symbols": {
+    "it": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include test(Aspnet Core Test)"
+    },
+    "iv": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include Vue"
+    },
+    "ia": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true",
+      "description": "Include Angular"
+    },
+    "dataBaseType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "MsSQL",
+          "description": "MS SQL Server"
+        },
+        {
+          "choice": "MySQL",
+          "description": "MySQL"
+        },
+        {
+          "choice": "PgSQL",
+          "description": "PostgreSQL"
+        },
+        {
+          "choice": "SQLite",
+          "description": "SQLite"
+        },
+        {
+          "choice": "Oracle",
+          "description": "Oracle"
+        }
+      ],
+      "defaultValue": "MsSQL",
+      "description": "The type of SQL to use"
+    },
+    "MsSQL": {
+      "type": "computed",
+      "value": "(dataBaseType == \"MsSQL\")"
+    },
+    "MySQL": {
+      "type": "computed",
+      "value": "(dataBaseType == \"MySQL\")"
+    },
+    "PgSQL": {
+      "type": "computed",
+      "value": "(dataBaseType == \"PgSQL\")"
+    },
+    "SQLite": {
+      "type": "computed",
+      "value": "(dataBaseType == \"SQLite\")"
+    },
+    "Oracle": {
+      "type": "computed",
+      "value": "(dataBaseType == \"Oracle\")"
+    },
+    "logType": {
+      "type": "parameter",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "Log4Net",
+          "description": "Use Log4Net"
+        },
+        {
+          "choice": "NLog",
+          "description": "Use NLog"
+        }
+      ],
+      "defaultValue": "NLog",
+      "description": "The type of SQL to use"
+    },
+    "Log4Net": {
+      "type": "computed",
+      "value": "(logType == \"Log4Net\")"
+    },
+    "NLog": {
+      "type": "computed",
+      "value": "(logType == \"NLog\")"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(it)",
+          "exclude": [ "aspnet-core/test/**/*" ]
+        },
+        {
+          "condition": "(iv)",
+          "exclude": [ "vue/**/*" ]
+        },
+        {
+          "condition": "(ia)",
+          "exclude": [ "angular/**/*" ]
+        }
+      ]
+    }
+  ]
+}

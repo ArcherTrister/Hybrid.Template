@@ -1,0 +1,1 @@
+dotnet new hybrid -n hello.demo -d MySQL -lo Log4Net -o "C:/Users/ArcherTrister/source/repos"

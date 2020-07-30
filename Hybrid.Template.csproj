@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\build\packages.props" />
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<PackageId>Hybrid.Template</PackageId>
+		<Summary>Hybrid Template</Summary>
+		<Description>Hybrid 模板项目</Description>
+		<PackageType>Template</PackageType>
+		<IncludeContentInPack>true</IncludeContentInPack>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<ContentTargetFolders>content</ContentTargetFolders>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>bin\Release\Hybrid.Template.xml</DocumentationFile>
+		<OutputPath>bin\Release</OutputPath>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="content\.template.config\template.json" />
+	<Content Include="Hybrid.Template\**\*" Exclude="Hybrid.Template\**\bin\**;Hybrid.Template\**\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="content\aspnet-core\test\" />
+    <Folder Include="sh\" />
+    <Folder Include="content\vue\" />
+    <Folder Include="content\angular\" />
+  </ItemGroup>
+
+</Project>
