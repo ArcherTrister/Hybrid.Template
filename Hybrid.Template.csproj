@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <Content Include="content\.template.config\template.json" />
-	<Content Include="Hybrid.Template\**\*" Exclude="Hybrid.Template\**\bin\**;Hybrid.Template\**\obj\**" />
   </ItemGroup>
 
   <ItemGroup>
